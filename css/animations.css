@@ -1,0 +1,247 @@
+/* ================= animations.css ================= */
+
+/* ================= ANIMATION ELEMENTS ================= */
+
+.hero-text,
+.hero-image,
+.product-card,
+.routine-card,
+.tip-box,
+.instagram-container img,
+.quote,
+.section-title{
+
+    opacity: 0;
+
+    transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+/* ================= START POSITION ================= */
+
+.hero-text{
+    transform: translateX(-80px);
+}
+
+.hero-image{
+    transform: translateX(80px);
+}
+
+.product-card{
+    transform: translateY(80px);
+}
+
+.routine-card{
+    transform: translateY(80px);
+}
+
+.tip-box{
+    transform: translateX(80px);
+}
+
+.instagram-container img{
+    transform: scale(0.8);
+}
+
+.quote{
+    transform: scale(0.8);
+}
+
+.section-title{
+    transform: translateY(50px);
+}
+
+/* ================= SHOW ANIMATION ================= */
+
+.show{
+
+    opacity: 1 !important;
+
+    transform:
+    translateX(0)
+    translateY(0)
+    scale(1) !important;
+}
+
+/* ================= FLOAT ANIMATION ================= */
+
+@keyframes float {
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-18px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* ================= HERO IMAGE FLOAT ================= */
+
+.hero-image img{
+
+    animation: float 4s ease-in-out infinite;
+}
+
+/* ================= PRODUCT HOVER ================= */
+
+.product-card:hover{
+
+    transform: translateY(-12px) scale(1.02) !important;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.1),
+    0 10px 20px rgba(255,122,156,0.15);
+}
+
+/* ================= ROUTINE HOVER ================= */
+
+.routine-card:hover{
+
+    transform: translateY(-12px) scale(1.02) !important;
+}
+
+/* ================= TIP BOX HOVER ================= */
+
+.tip-box:hover{
+
+    transform: translateX(10px) !important;
+}
+
+/* ================= INSTAGRAM HOVER ================= */
+
+.instagram-container img:hover{
+
+    transform: scale(1.05) !important;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* =========================
+   GLOBAL ANIMATIONS
+========================= */
+
+/* Smooth Page Load */
+
+body{
+    animation: pageFade 0.8s ease;
+}
+
+@keyframes pageFade{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+/* Fade Up Animation */
+
+.fade-up{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 1s ease forwards;
+}
+
+.fade-up-delay{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.3s;
+}
+
+.fade-up-delay2{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp 1s ease forwards;
+    animation-delay:0.6s;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* Zoom Animation */
+
+.zoom-in{
+    animation:zoomIn 1s ease;
+}
+
+@keyframes zoomIn{
+
+    from{
+        opacity:0;
+        transform:scale(0.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+
+/* Hover Effects */
+
+.card,
+.product-card,
+.benefit-card,
+.contact-box{
+
+    transition:0.4s ease;
+}
+
+.card:hover,
+.product-card:hover,
+.benefit-card:hover,
+.contact-box:hover{
+
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+
+/* Image Hover Zoom */
+
+img{
+    transition:0.4s ease;
+}
+
+img:hover{
+    transform:scale(1.03);
+}
+
+
+/* Button Animation */
+
+button,
+.btn{
+
+    transition:0.3s ease;
+}
+
+button:hover,
+.btn:hover{
+
+    transform:translateY(-3px);
+    opacity:0.9;
+}

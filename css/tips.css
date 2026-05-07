@@ -1,0 +1,850 @@
+/* =========================================
+                GLOWCARE TIPS.CSS
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================================
+                GLOBAL
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f7f3f4;
+    color:#222;
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* =========================================
+                NAVBAR
+========================================= */
+
+.navbar{
+
+    width:100%;
+
+    background:#ffffff;
+
+    padding:18px 7%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 2px 12px rgba(0,0,0,0.04);
+}
+
+/* LOGO */
+
+.logo{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:#ff6f9f;
+}
+
+/* NAV LINKS */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+}
+
+.nav-links a{
+
+    color:#222;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+
+    color:#ff6f9f;
+}
+
+/* ICONS */
+
+.nav-icons{
+
+    display:flex;
+
+    gap:12px;
+}
+
+.nav-icons i{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    background:#ffe7ef;
+
+    color:#ff6f9f;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.nav-icons i:hover{
+
+    transform:translateY(-4px);
+
+    background:#ff6f9f;
+
+    color:#fff;
+}
+
+/* =========================================
+                HERO
+========================================= */
+
+.tips-hero{
+
+    width:92%;
+
+    margin:40px auto;
+
+    background:#efe8e8;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+}
+
+/* IMAGE */
+
+.hero-image img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+}
+
+/* CONTENT */
+
+.hero-content{
+
+    padding:50px;
+}
+
+.hero-content span{
+
+    color:#ff7ca8;
+
+    font-size:15px;
+
+    font-weight:600;
+}
+
+.hero-content h1{
+
+    font-size:3.8rem;
+
+    line-height:1.1;
+
+    margin:18px 0;
+
+    font-weight:700;
+}
+
+.hero-content p{
+
+    font-size:1rem;
+
+    line-height:1.9;
+
+    color:#555;
+
+    margin-bottom:28px;
+}
+
+/* BUTTON */
+
+.hero-btn{
+
+    display:inline-block;
+
+    padding:14px 28px;
+
+    border-radius:50px;
+
+    background:#ff6f9f;
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.hero-btn:hover{
+
+    transform:translateY(-4px);
+}
+
+/* =========================================
+                SECOND SECTION
+========================================= */
+
+.tips-section{
+
+    width:92%;
+
+    margin:80px auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:45px;
+
+    align-items:center;
+}
+
+/* CONTENT */
+
+.tips-content span{
+
+    color:#ff7ca8;
+
+    font-size:15px;
+
+    font-weight:600;
+}
+
+.tips-content h2{
+
+    font-size:3rem;
+
+    line-height:1.2;
+
+    margin:15px 0 25px;
+}
+
+/* TIP BOX */
+
+.tip-box{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    margin-bottom:20px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.04);
+}
+
+.tip-box h3{
+
+    font-size:1.3rem;
+
+    margin-bottom:15px;
+}
+
+.tip-box p{
+
+    color:#555;
+
+    margin-bottom:10px;
+
+    font-size:15px;
+}
+
+/* IMAGE */
+
+.tips-image img{
+
+    width:100%;
+
+    height:520px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+}
+
+/* =========================================
+            ROUTINE FLOW
+========================================= */
+
+.routine-flow-section{
+
+    width:92%;
+
+    margin:80px auto;
+
+    display:grid;
+
+    grid-template-columns:45% 55%;
+
+    gap:45px;
+
+    align-items:center;
+}
+
+/* IMAGE */
+
+.routine-flow-image img{
+
+    width:100%;
+
+    border-radius:25px;
+}
+
+/* CONTENT */
+
+.routine-flow-content span{
+
+    color:#ff7ca8;
+
+    font-size:15px;
+
+    font-weight:600;
+}
+
+.routine-flow-content h2{
+
+    font-size:3rem;
+
+    line-height:1.2;
+
+    margin:15px 0 30px;
+}
+
+/* STEP */
+
+.flow-step{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+    margin-bottom:18px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.04);
+}
+
+/* NUMBER */
+
+.flow-number{
+
+    min-width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    background:#ff6f9f;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-weight:700;
+}
+
+/* TEXT */
+
+.flow-text h4{
+
+    font-size:1.2rem;
+
+    margin-bottom:5px;
+}
+
+.flow-text p{
+
+    font-size:15px;
+
+    color:#666;
+
+    line-height:1.7;
+}
+
+/* =========================================
+                PRODUCT TIPS
+========================================= */
+
+.product-tips{
+
+    width:92%;
+
+    margin:90px auto;
+}
+
+/* TITLE */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:45px;
+}
+
+.section-title span{
+
+    color:#ff6f9f;
+
+    font-weight:600;
+
+    font-size:15px;
+}
+
+.section-title h2{
+
+    font-size:3rem;
+
+    margin-top:12px;
+}
+
+/* GRID */
+
+.tips-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+/* CARD */
+
+.tips-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.05);
+
+    transition:0.3s;
+}
+
+.tips-card:hover{
+
+    transform:translateY(-6px);
+}
+
+/* IMAGE */
+
+.tips-card img{
+
+    height:320px;
+
+    object-fit:cover;
+}
+
+/* CONTENT */
+
+.tips-card h3{
+
+    font-size:1.4rem;
+
+    padding:20px 20px 10px;
+}
+
+.tips-card p{
+
+    padding:0 20px 25px;
+
+    color:#666;
+
+    line-height:1.7;
+
+    font-size:15px;
+}
+
+/* =========================================
+                FAQ
+========================================= */
+
+.faq-section{
+
+    width:92%;
+
+    margin:90px auto;
+}
+
+.faq-container{
+
+    margin-top:40px;
+}
+
+/* ITEM */
+
+.faq-item{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    margin-bottom:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.04);
+}
+
+/* QUESTION */
+
+.faq-question{
+
+    padding:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    cursor:pointer;
+}
+
+.faq-question h3{
+
+    font-size:1.1rem;
+}
+
+.faq-question span{
+
+    font-size:1.5rem;
+
+    color:#ff6f9f;
+}
+
+/* ANSWER */
+
+.faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:0.4s ease;
+
+    padding:0 25px;
+}
+
+.faq-item.active .faq-answer{
+
+    max-height:200px;
+
+    padding:0 25px 25px;
+}
+
+.faq-answer p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:15px;
+}
+
+/* =========================================
+                QUOTE
+========================================= */
+
+.quote{
+
+    width:92%;
+
+    margin:90px auto;
+
+    background:#ffdce8;
+
+    border-radius:28px;
+
+    padding:60px 40px;
+
+    text-align:center;
+}
+
+.quote img{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin:0 auto 25px;
+}
+
+.quote h2{
+
+    font-size:2.5rem;
+
+    line-height:1.4;
+}
+
+/* =========================================
+                FOOTER
+========================================= */
+/* =========================================
+                MODERN FOOTER
+========================================= */
+
+.footer{
+
+    background:#111;
+
+    color:white;
+
+    padding:80px 7% 30px;
+}
+
+.footer-top{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:50px;
+
+    margin-bottom:60px;
+}
+
+.footer-logo h2{
+
+    color:#ff7a9c;
+
+    font-size:46px;
+
+    margin-bottom:18px;
+}
+
+.footer-logo p{
+
+    color:#bbb;
+
+    line-height:1.9;
+
+    max-width:420px;
+}
+
+.footer-links h3{
+
+    margin-bottom:20px;
+
+    font-size:24px;
+}
+
+.footer-links a{
+
+    display:block;
+
+    margin-bottom:14px;
+
+    color:#bbb;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+    color:#ff7a9c;
+
+    transform:translateX(5px);
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,0.08);
+
+    padding-top:25px;
+
+    text-align:center;
+
+    color:#aaa;
+}
+/* =========================================
+            RESPONSIVE FOOTER
+========================================= */
+
+@media(max-width:991px){
+
+    .footer-top{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:40px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .footer{
+
+        padding:50px 30px 25px;
+    }
+
+    .footer-top{
+
+        grid-template-columns:1fr;
+    }
+
+    .footer-logo h2{
+
+        font-size:2.4rem;
+    }
+
+}
+/* =========================================
+                RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+    .tips-hero,
+    .tips-section,
+    .routine-flow-section{
+
+        grid-template-columns:1fr;
+    }
+
+    .tips-grid{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-top{
+
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:18px;
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+    }
+
+    .hero-content h1,
+    .tips-content h2,
+    .routine-flow-content h2,
+    .section-title h2{
+
+        font-size:2.2rem;
+    }
+
+    .tips-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .footer-top{
+
+        grid-template-columns:1fr;
+    }
+
+    .quote h2{
+
+        font-size:1.8rem;
+    }
+
+    .hero-image img,
+    .tips-image img{
+
+        height:350px;
+    }
+
+}

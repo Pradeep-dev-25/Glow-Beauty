@@ -1,0 +1,325 @@
+/* ================= responsive.css ================= */
+
+/* ================= LARGE LAPTOP ================= */
+
+@media(max-width: 1200px){
+
+    .hero{
+        gap: 50px;
+    }
+
+    .hero-text h1{
+        font-size: 65px;
+    }
+
+    .hero-text p{
+        font-size: 20px;
+    }
+
+    .section-title h2{
+        font-size: 55px;
+    }
+
+    .tips-content h2{
+        font-size: 42px;
+    }
+
+}
+
+/* ================= LARGE TABLET ================= */
+
+@media(max-width: 1100px){
+
+    .hero-text h1{
+        font-size: 55px;
+    }
+
+    .tips-content h2{
+        font-size: 40px;
+    }
+
+    .product-container{
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    }
+
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width: 991px){
+
+    section{
+        padding: 70px 6%;
+    }
+
+    /* HERO */
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+
+        min-height: auto;
+
+        gap: 50px;
+    }
+
+    .hero-text{
+        max-width: 100%;
+    }
+
+    .hero-text p{
+        margin: auto;
+    }
+
+    .hero-buttons{
+        justify-content: center;
+    }
+
+    .hero-image img{
+        width: 80%;
+        max-width: 500px;
+    }
+
+    /* TIPS */
+
+    .tips{
+        flex-direction: column;
+    }
+
+    .tips-content{
+        text-align: center;
+    }
+
+    /* PRODUCT */
+
+    .product-container{
+        grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+    }
+
+    /* FOOTER */
+
+    .footer-links{
+        gap: 20px;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 768px){
+
+    section{
+        padding: 60px 5%;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+        height: 75px;
+        padding: 0 5%;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .logo{
+        font-size: 24px;
+    }
+
+    .nav-icons{
+        gap: 10px;
+    }
+
+    .nav-icons i{
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    /* HERO */
+
+    .hero{
+        gap: 35px;
+    }
+
+    .hero-text h1{
+        font-size: 42px;
+        line-height: 1.2;
+    }
+
+    .hero-text p{
+        font-size: 16px;
+    }
+
+    .hero-buttons{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn{
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image img{
+        width: 100%;
+    }
+
+    /* SECTION TITLE */
+
+    .section-title h2{
+        font-size: 38px;
+    }
+
+    /* PRODUCTS */
+
+    .product-container{
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+        gap: 20px;
+    }
+
+    .product-image{
+        height: 240px;
+    }
+
+    .product-content{
+        padding: 20px;
+    }
+
+    .product-content h3{
+        font-size: 22px;
+    }
+
+    .product-content p{
+        font-size: 15px;
+    }
+
+    /* TIPS */
+
+    .tips-content h2{
+        font-size: 32px;
+    }
+
+    .tip-box{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* QUOTE */
+
+    .quote{
+        margin: 30px 5%;
+        padding: 50px 20px;
+    }
+
+    .quote h2{
+        font-size: 28px;
+        line-height: 1.5;
+    }
+
+    /* INSTAGRAM */
+
+    .instagram-container{
+        grid-template-columns: repeat(auto-fit,minmax(170px,1fr));
+        gap: 18px;
+    }
+
+    .instagram-container img{
+        height: 220px;
+    }
+
+    /* FOOTER */
+
+    .footer-links{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-social{
+        gap: 15px;
+    }
+
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width: 480px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* HERO */
+
+    .hero{
+        padding-top: 40px;
+    }
+
+    .hero-text h1{
+        font-size: 34px;
+    }
+
+    .hero-text p{
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .hero-image img{
+        width: 100%;
+    }
+
+    /* SECTION TITLE */
+
+    .section-title h2{
+        font-size: 30px;
+    }
+
+    /* PRODUCTS */
+
+    .product-container{
+        grid-template-columns: 1fr;
+    }
+
+    .product-image{
+        height: 250px;
+    }
+
+    .product-content h3{
+        font-size: 20px;
+    }
+
+    .product-icons i{
+        width: 40px;
+        height: 40px;
+    }
+
+    /* TIPS */
+
+    .tips-content h2{
+        font-size: 28px;
+    }
+
+    /* QUOTE */
+
+    .quote h2{
+        font-size: 24px;
+    }
+
+    /* INSTAGRAM */
+
+    .instagram-container{
+        grid-template-columns: 1fr;
+    }
+
+    .instagram-container img{
+        height: 260px;
+    }
+
+    /* FOOTER */
+
+    .footer-logo{
+        font-size: 28px;
+    }
+
+}
