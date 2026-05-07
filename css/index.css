@@ -391,12 +391,30 @@ header{
 }
 
 .quote-box h2{
-    font-size:48px;
+    font-size:35px;
     font-weight:800;
     color:#222;
     line-height:1.2;
 }
 
+.instagram-container img{
+
+    opacity: 1;
+
+    transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+
+    transform: scale(1);
+}
+
+.instagram-container img:hover{
+
+    scale: 1.05;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.12);
+}
 /* ================= INSTAGRAM ================= */
 
 .instagram-section{
@@ -627,5 +645,186 @@ header{
     .btn{
         width:100%;
         text-align:center;
+    }
+}
+
+/* ================= MOBILE MENU ================= */
+
+.menu-btn{
+
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    background:#fff1f5;
+    color:#ff7a9c;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    transition:0.3s;
+}
+
+.menu-btn:hover{
+
+    background:#ff7a9c;
+    color:#fff;
+}
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:0;
+    right:-100%;
+
+    width:300px;
+    height:100vh;
+
+    background:#fff;
+
+    z-index:2000;
+
+    padding:100px 35px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:28px;
+
+    transition:0.4s ease;
+
+    box-shadow:
+    -5px 0 25px rgba(0,0,0,0.08);
+}
+
+.mobile-menu.active{
+
+    right:0;
+}
+
+.mobile-menu a{
+
+    color:#222;
+
+    font-size:18px;
+    font-weight:500;
+
+    transition:0.3s;
+}
+
+.mobile-menu a:hover,
+.mobile-menu .active{
+
+    color:#ff7a9c;
+}
+
+.close-btn{
+
+    position:absolute;
+
+    top:25px;
+    right:25px;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    background:#fff1f5;
+    color:#ff7a9c;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+}
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.45);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:0.4s;
+
+    z-index:1500;
+}
+
+.overlay.active{
+
+    opacity:1;
+    visibility:visible;
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:991px){
+
+    .nav-links{
+
+        display:none;
+    }
+
+    .menu-btn{
+
+        display:flex;
+    }
+
+    .navbar{
+
+        padding:0 5%;
+    }
+
+    .logo{
+
+        font-size:34px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .mobile-menu{
+
+        width:280px;
+    }
+
+    .logo{
+
+        font-size:28px;
+    }
+
+    .navbar{
+
+        height:80px;
+    }
+}
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:500px){
+
+    .mobile-menu{
+
+        width:100%;
+    }
+
+    .logo{
+
+        font-size:24px;
     }
 }

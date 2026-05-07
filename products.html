@@ -11,7 +11,7 @@
 
     <!-- CSS -->
 
-    
+
     <link rel="stylesheet" href="css/product.css">
 
     <!-- FONT AWESOME -->
@@ -24,21 +24,25 @@
 
     <!-- ================= HEADER ================= -->
 
+    <!-- ================= HEADER ================= -->
+
     <header>
 
         <div class="navbar">
 
-            <a href="#" class="logo">
+            <!-- LOGO -->
+
+            <a href="index.html" class="logo">
                 GlowCare ✨
             </a>
+
+            <!-- NAV LINKS -->
 
             <ul class="nav-links">
 
                 <li><a href="index.html">Home</a></li>
 
-                <li><a href="#" class="active">
-                        Products
-                    </a></li>
+                <li><a href="products.html" class="active">Products</a></li>
 
                 <li><a href="routine.html">Routine</a></li>
 
@@ -50,19 +54,61 @@
 
             </ul>
 
+            <!-- NAV ICONS -->
+
             <div class="nav-icons">
 
                 <i class="fa-solid fa-magnifying-glass"></i>
 
                 <i class="fa-regular fa-heart"></i>
 
-                <i class="fa-solid fa-bars"></i>
+                <!-- MOBILE MENU BUTTON -->
+
+                <div class="menu-btn">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </div>
 
             </div>
 
         </div>
 
     </header>
+
+    <!-- ================= MOBILE SIDEBAR ================= -->
+
+    <div class="mobile-menu">
+
+        <!-- CLOSE BUTTON -->
+
+        <div class="close-btn">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </div>
+
+        <!-- MOBILE LINKS -->
+
+        <a href="index.html">Home</a>
+
+        <a href="products.html" class="active">
+            Products
+        </a>
+
+        <a href="routine.html">Routine</a>
+
+        <a href="tips.html">Tips</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+    <!-- OVERLAY -->
+
+    <div class="overlay"></div>
 
     <!-- ================= PRODUCTS PAGE ================= -->
 
@@ -623,7 +669,44 @@
 
     <!-- ================= HEART JS ================= -->
 
-    <script>
+    <script src="js/product.js">
+
+        /* ================= MOBILE MENU ================= */
+
+        
+
+
+        const menuBtn =
+            document.querySelector(".menu-btn");
+
+        const mobileMenu =
+            document.querySelector(".mobile-menu");
+
+        const closeBtn =
+            document.querySelector(".close-btn");
+
+        const overlay =
+            document.querySelector(".overlay");
+
+        menuBtn.onclick = () => {
+
+            mobileMenu.classList.add("active");
+            overlay.classList.add("active");
+        }
+
+        closeBtn.onclick = () => {
+
+            mobileMenu.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+
+        overlay.onclick = () => {
+
+            mobileMenu.classList.remove("active");
+            overlay.classList.remove("active");
+        }
+
+        /* ================= HEART BUTTON ================= */
 
         const hearts =
             document.querySelectorAll(".heart-btn");
@@ -633,9 +716,7 @@
             heart.addEventListener("click", () => {
 
                 heart.classList.toggle("fa-regular");
-
                 heart.classList.toggle("fa-solid");
-
                 heart.classList.toggle("active");
 
             });

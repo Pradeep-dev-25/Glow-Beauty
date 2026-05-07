@@ -16,12 +16,11 @@
 
     <!-- FONT AWESOME -->
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS -->
 
-    
+
     <link rel="stylesheet" href="css/tips.css">
 
 </head>
@@ -32,39 +31,73 @@
                     NAVBAR
     ========================================= -->
 
-    <nav class="navbar">
+    <!-- ================= HEADER ================= -->
 
-        <a href="index.html" class="logo">
-            GlowCare ✨
-        </a>
+    <header>
 
-        <ul class="nav-links">
+        <nav class="navbar">
 
-            <li><a href="index.html">Home</a></li>
+            <a href="index.html" class="logo">
+                GlowCare ✨
+            </a>
 
-            <li><a href="products.html">Products</a></li>
+            <!-- DESKTOP LINKS -->
 
-            <li><a href="routine.html">Routine</a></li>
+            <ul class="nav-links">
 
-            <li><a href="tips.html" class="active">Tips</a></li>
+                <li><a href="index.html">Home</a></li>
 
-            <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
 
-            <li><a href="contact.html">Contact</a></li>
+                <li><a href="routine.html">Routine</a></li>
 
-        </ul>
+                <li><a href="tips.html" class="active">Tips</a></li>
 
-        <div class="nav-icons">
+                <li><a href="about.html">About</a></li>
 
-            <i class="fa-solid fa-magnifying-glass"></i>
+                <li><a href="contact.html">Contact</a></li>
 
-            <i class="fa-regular fa-heart"></i>
+            </ul>
 
-            <i class="fa-solid fa-bars"></i>
+            <!-- MENU BUTTON -->
+
+            <div class="menu-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ================= OVERLAY ================= -->
+
+    <div class="overlay"></div>
+
+    <!-- ================= MOBILE MENU ================= -->
+
+    <div class="mobile-menu">
+
+        <div class="close-btn">
+
+            <i class="fa-solid fa-xmark"></i>
 
         </div>
 
-    </nav>
+        <a href="index.html">Home</a>
+
+        <a href="products.html">Products</a>
+
+        <a href="routine.html">Routine</a>
+
+        <a href="tips.html" class="active">Tips</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
 
     <!-- =========================================
                     HERO SECTION
@@ -520,34 +553,33 @@
     <!-- =========================================
                     FAQ JS
     ========================================= -->
+    <script src="js/main.js">
 
-    <script>
+    const faqItems = document.querySelectorAll(".faq-item");
 
-        const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach(item => {
 
-        faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
 
-            const question = item.querySelector(".faq-question");
+    question.addEventListener("click", () => {
 
-            question.addEventListener("click", () => {
+    item.classList.toggle("active");
 
-                item.classList.toggle("active");
+    const icon = item.querySelector("span");
 
-                const icon = item.querySelector("span");
+    if (item.classList.contains("active")) {
 
-                if (item.classList.contains("active")) {
+    icon.innerHTML = "-";
 
-                    icon.innerHTML = "-";
+    } else {
 
-                } else {
+    icon.innerHTML = "+";
 
-                    icon.innerHTML = "+";
+    }
 
-                }
+    });
 
-            });
-
-        });
+    });
 
     </script>
 
